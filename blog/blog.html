@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,67 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Flower blog</title>
 </head>
+
 <body>
-<header>
-    <!-------This is menu list-->
-    <h1>My Flowers</h1>
-    <div>
-            <a href="#">About</a>
+    <header>
+        <!-------This is menu list-->
+        <h1>My Flowers</h1>
+        <nav>
+            <!-- <a href="#">About</a>
             <a href="#">Blog</a>
             <a href="#">Register</a>
             <a href="#">Contact Me</a>
-            <i class='bx bx-search'></i><input type="search-input" placeholder="Search"> 
-        
-    </div>
-    
-</header> 
+            <i class='bx bx-search'></i><input type="search-input" placeholder="Search">     -->
+            <ul class="menu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog Register</a></li>
+                <li><a href="">Blog Edit</a></li>
+                <li> <a href="#">Contact Me</a></li>
+                <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search"></li>
+            </ul>
+        </nav>
+
+    </header>
     <!-------This is top picture-->
-    <div class="mainvisual">
+    <!-- <div class="mainvisual">
         <img src="./img/pic3.jpg" alt="">
     </div>
-    <div>
+    <div> -->
     <!-------This is flower corner (middle)-->
-        <h2>My Flower Corner</h2>
-    </div>
+    <h2>My Flower Corner</h2>
+
     <div class="flower-corner">
         <img src="./img/pic5.jpeg" alt="">
         <img src="./img/pic8.jpeg" alt="">
-        <img src="./img/pic7.jpeg" alt="">   
+        <img src="./img/pic7.jpeg" alt="">
     </div>
     <!-------This is my personal article-->
-    <div class="card">
-        <img src="./img/pic1.jpg" alt="">
-        <p>There's a certain poetic notion to flowers and how they make us feel.</p>
+    <div>
+        <h3>My Daily Blog</h3>
     </div>
-    <div class="card1">
-        <img src="img/pic2.jpg" alt="">
-        <p>Wedding flowers as timeless and magical as your love.</p>
+    <div>
+        <div class="card">
+            <img src="./img/pic1.jpg" alt="">
+            <p>There's a certain poetic notion to flowers and how they make us feel.</p>
+        </div>
+        <div class="card1">
+            <img src="img/pic2.jpg" alt="">
+            <p>Wedding flowers as timeless and magical as your love.</p>
+        </div>
     </div>
     <!-------This is footer-->
-    <footer class="location">
-    <div>
-        <p>910 Pecan Avenue Charlotte, NC 28205</p>
-        <p>MON-FRI 9am-6pm SAT 10am-3pm</p>
-        <i class='bx bxl-facebook-circle' ></i>
-        <i class='bx bxl-instagram' ></i>
-        <i class='bx bxl-tiktok' ></i>
-    </div>
-    <div class="copyright">
-        <p>Copyright<small>&copy;Min's Blog</small></p>
-    </div>
+    <footer>
+        <div>
+            <p>910 Pecan Avenue Charlotte, NC 28205</p>
+            <p>MON-FRI 9am-6pm SAT 10am-3pm</p>
+            <ul class="footer-menu">
+                <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+                <li><a href=""><i class='bx bxl-tiktok'></i></a></li>
+            </ul>
+            <p>Copyright<small>&copy;Min's Blog</small></p>
+        </div>
     </footer>
 </body>
+
 </html>
