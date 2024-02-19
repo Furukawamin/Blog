@@ -18,10 +18,11 @@ h1{
     padding: 30px;
 }
 
+
 nav{
     background-image: url(./img/pic3.jpg);
     background-repeat: no-repeat;
-    height: 360px;
+    height: 580px;
     background-size: 100%; 
     display: flex;
     justify-content: center;
@@ -40,6 +41,10 @@ nav{
     padding: 15px; 
     font-size: 18px;
     font-weight: 1000px;   
+}
+
+.menu a:hover{
+    
 }
 
 h2{
