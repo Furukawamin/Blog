@@ -12,7 +12,7 @@ public interface BlogsRepository extends JpaRepository<BlogsEntity, Long> {
 	BlogsEntity save(BlogsEntity blogsEntity);
 	
 	//Find blogs by username
-	BlogsEntity findByUserId(String userId);
+	BlogsEntity findByUserId(Long userId);
 	
 	//Get All Blog Data
 	List<BlogsEntity>findAll();

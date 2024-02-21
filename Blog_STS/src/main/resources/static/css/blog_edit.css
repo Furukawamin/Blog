@@ -14,7 +14,7 @@ body{
 }
 
 .menu{
-    background-image: url(./image/background.jpg);
+    background-image: url(../image/pic3.jpg);
     background-repeat: no-repeat;
     height: 300px;
     display: flex;
@@ -97,5 +97,3 @@ footer{
 .footer-menu i{
     color:#fff;
 }
-
-

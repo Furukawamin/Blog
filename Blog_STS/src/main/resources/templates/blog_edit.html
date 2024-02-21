@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blogregister.css">
+    <link rel="stylesheet" th:href="@{css/blog_edit.css}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
@@ -13,13 +13,12 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Blog Register</a></li>
             <li><a href="">Blog Category</a></li>
-            <li> <a href="#">Blog Title</a></li>
             <li> <a href="#">Logout</a></li>
             <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search"></li>
         </ul>
     </nav>
     <form action="#" method="post">
-        <h1>Blog Register</h1>
+        <h1>Blog Edit</h1>
     <div class="wrapper">
         <ul>
             <li><i class='bx bxs-user'></i><input type="text" name="username" placeholder="User ID" required></li>
