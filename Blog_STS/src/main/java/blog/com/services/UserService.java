@@ -1,5 +1,8 @@
 package blog.com.services;
 
+import java.security.Security;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +16,10 @@ public class UserService {
 	
 	@Autowired
 	private UsersRepository usersRepo;
-	public boolean createUser(String username,String email,String password) {
+	public boolean createAccount(String name, String email, String phone, String password) {
 		if(usersRepo.findByEmail(email)== null) {
-			usersRepo.save(new UsersEntity(email,password,username));
+			usersRepo.save(new UsersEntity(name,email,password,phone));
+//			Security.addusersRepo(email,password);
 			return true;
 		}else {
 		return false;
@@ -32,5 +36,15 @@ public class UserService {
 			return usersEntity;
 		}
 	}
+	//Get user account data
+	public List<UsersEntity> getAllAccounts(){
+		return usersRepo.findAll();
+	}
+	
+	//If ID by email
+	public UsersEntity selectById(String email) {
+		return usersRepo.findByEmail(email);
+	}
+	}
 
-}
+

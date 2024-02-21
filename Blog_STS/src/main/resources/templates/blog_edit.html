@@ -11,13 +11,13 @@
         <nav>
         <ul class="menu">
             <li><a href="#">About</a></li>
-            <li><a href="#">Blog Register</a></li>
-            <li><a href="">Blog Category</a></li>
-            <li> <a href="#">Logout</a></li>
+            <li><a th:href="@{/blog_register}">Blog Register</a></li>
+            <li><a th:href="@{/blog_edit}">Blog Category</a></li>
+            <li> <a th:href="@{/login}">Logout</a></li>
             <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search"></li>
         </ul>
     </nav>
-    <form action="#" method="post">
+    <form th:action="@{blog_edit}" method="post">
         <h1>Blog Edit</h1>
     <div class="wrapper">
         <ul>

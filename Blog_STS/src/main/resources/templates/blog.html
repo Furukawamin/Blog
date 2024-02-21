@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{css/blog.css}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link th:href='@{https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css}' rel='stylesheet'>
     <title>Flower blog</title>
 </head>
 
@@ -20,10 +20,11 @@
             <a href="#">Contact Me</a>
             <i class='bx bx-search'></i><input type="search-input" placeholder="Search">     -->
             <ul class="menu">
-                <li><a th:href="@{/blog.html}">About</a></li>
+                <li><a href="#">About</a></li>
                 <li><a th:href="@{/blog_register}">Blog Register</a></li>
-                <li><a th:href="@{/blog_register}">Blog Category</a></li>
-                <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search Blog Title"></li>
+                <li><a th:href="@{/blog_edit}">Blog Category</a></li>
+                <li> <a th:href="@{/login}">Logout</a></li>
+                <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search"></li>
             </ul>
         </nav>
 
@@ -38,9 +39,9 @@
     <h2>Flower Theme Blogs</h2>
 
     <div class="flower-corner">
-        <img th:src="@{../image/pic5.jpeg}" alt="">
-        <img th:src="@{../image/pic8.jpeg}" alt="">
-        <img th:src="@{../image/pic7.jpeg}" alt="">
+        <img src="./image/pic5.jpeg" alt="">
+        <img src="./image/pic8.jpeg" alt="">
+        <img src="./image/pic7.jpeg" alt="">
     </div>
     <!-------This is my personal article-->
     
@@ -49,11 +50,11 @@
     </div>
     <div>
         <div class="card">
-            <img th:src="@{../image/pic1.jpg}" alt="">
+            <img src="./image/pic1.jpg" alt="">
             <button class="btn">Edit</button>
             <button class="btn">Delete</button>
             <!-- <p1>There's a certain poetic notion to flowers and how they make us feel.</p1> -->
-            <img th:src="@{../image/pic2.jpg}" alt="">
+            <img src="image/pic2.jpg" alt="">
             <button class="btn">Edit</button>
             <button class="btn">Delete</button>
             <!-- <p2>Wedding flowers as timeless and magical as your love.</p2> -->
@@ -66,9 +67,9 @@
             <p>910 Pecan Avenue Charlotte, NC 28205</p>
             <p>MON-FRI 9am-6pm SAT 10am-3pm</p>
             <ul class="footer-menu">
-                <li><a th:href="@{/login}"><i class='bx bxl-facebook-circle'></i></a></li>
-                <li><a th:href="@{/login}"><i class='bx bxl-instagram'></i></a></li>
-                <li><a th:href="@{/login}"><i class='bx bxl-tiktok'></i></a></li>
+                <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+                <li><a href=""><i class='bx bxl-tiktok'></i></a></li>
             </ul>
             <p>Copyright<small>&copy;Min's Blog</small></p>
         </div>

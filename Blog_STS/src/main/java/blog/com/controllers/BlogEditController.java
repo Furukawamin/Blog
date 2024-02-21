@@ -9,4 +9,6 @@ public class BlogEditController {
 	public String getBlogEditPage(){
 		return "blog_edit.html";
 	}
+	
+	
 }

@@ -10,22 +10,23 @@
 <body>
         <nav>
         <ul class="menu">
-            <li><a th:href="#">About</a></li>
+            <li><a href="#">About</a></li>
             <li><a th:href="@{/blog_register}">Blog Register</a></li>
-            <li><a th:href="@{/blog_register}">Blog Category</a></li>
-            <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search Blog Title"></li>
+            <li><a th:href="@{/blog_edit}">Blog Category</a></li>
+            <li> <a th:href="@{/login}">Logout</a></li>
+            <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search"></li>
         </ul>
     </nav>
     <form th:action="@{/blog_register}" method="post">
         <h1>Blog Register</h1>
     <div class="wrapper">
         <ul>
-            <li><i class='bx bxs-user'></i><input type="text" name="username" placeholder="User ID" required></li>
-            <li><i class='bx bxl-blogger'></i><input type="text" name="title" placeholder="Blog Title" required></li>
-            <li><i class='bx bx-list-ul' ></i><input type="text" name="category" placeholder="Category"></li>
-            <li><i class='bx bx-calendar' ></i><input type="date" name="calendar" placeholder="/MM/YYYY" ></li>
+            <li><i class='bx bxs-user'></i><input type="text" name="userId" placeholder="User ID" required></li>
+            <li><i class='bx bxl-blogger'></i><input type="text" name="blogTitle" placeholder="Blog Title" required></li>
+            <li><i class='bx bx-list-ul' ></i><input type="text" name="blogCategory" placeholder="Category"></li>
+            <li><i class='bx bx-calendar' ></i><input type="date" name="date" placeholder="/MM/YYYY" ></li>
             <li><i class='bx bxs-file-png' ></i><input type="file" name="photo" placeholder="Upload"></li>
-            <li><i class='bx bx-message-rounded-dots' ></i><textarea name="comment" id="" cols="30" rows="10" placeholder="Blog Article"></textarea></li>
+            <li><i class='bx bx-message-rounded-dots' ></i><textarea name="article" id="" cols="30" rows="10" placeholder="Blog Article"></textarea></li>
         </ul>
     </div>
         <div class="btn">
@@ -38,9 +39,9 @@
             <p>910 Pecan Avenue Charlotte, NC 28205</p>
             <p>MON-FRI 9am-6pm SAT 10am-3pm</p>
             <ul class="footer-menu">
-                <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
-                <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                <li><a href="#"><i class='bx bxl-tiktok'></i></a></li>
+                <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+                <li><a href=""><i class='bx bxl-tiktok'></i></a></li>
             </ul>
             <p>Copyright<small>&copy;Min's Blog</small></p>
         </div>

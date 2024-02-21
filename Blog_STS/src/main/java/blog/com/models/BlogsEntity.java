@@ -21,13 +21,21 @@ public class BlogsEntity {
 	private String photo;
 	private String article;
 	
-	public BlogsEntity(Long blogId, Long userId, String blogCategory, String blogTitle) {
+	public BlogsEntity() {
 		super();
-		this.blogId = blogId;
+	}
+
+	public BlogsEntity(Long userId, String blogCategory, String blogTitle, Date date, String photo, String article) {
+		super();
 		this.userId = userId;
 		this.blogCategory = blogCategory;
 		this.blogTitle = blogTitle;
+		this.date = date;
+		this.photo = photo;
+		this.article = article;
 	}
+	
+	
 	
 	
 	

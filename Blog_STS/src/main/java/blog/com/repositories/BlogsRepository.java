@@ -21,5 +21,5 @@ public interface BlogsRepository extends JpaRepository<BlogsEntity, Long> {
 	List<BlogsEntity> findByBlogTitleAndBlogCategory(String blogCategory, String blogTitle);
 	
 	//Delete blogs
-	void deleteByBlogTitle(String blogTitle);
+	boolean deleteByBlogTitle(String blogTitle);
 }
