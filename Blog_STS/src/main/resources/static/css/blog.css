@@ -1,0 +1,148 @@
+*{
+    font-family: 'poppins',sans-serif;  
+    text-align: center;
+    justify-content: center;
+    /* background-color: #fff; */
+    /*margin: auto;*/
+    /*padding: auto;*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    padding: 30px;
+}
+
+
+nav{
+    background-image: url(../image/pic3.jpg);
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 0 40px;
+    color: #fff;
+}
+
+.menu a{
+    color: #fff;
+    padding: 15px; 
+    font-size: 18px;
+    font-weight: 1000px;
+    text-decoration: none;  
+}
+
+.menu a:active{
+    color: purple;
+}
+
+
+h2{
+    margin:20px;
+    padding: 5px;
+    font-weight: 700px;
+}
+
+h3{
+    font-size: 25px;
+    margin: 20px;
+}
+
+
+footer{
+    background-color:grey;
+    width: 100%;
+    padding:20px;
+    font-weight: 600px;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.footer-menu li{
+  width: 20px;
+  padding: 0;
+}
+
+
+.footer-menu a{
+    color:#fff;
+}
+.footer-menu i{
+    color:#fff;
+}
+
+.btn{
+    position: relative;
+    top: -400px;
+    right: 35%;
+    width: 10%;
+    padding: 13px;
+    border-radius: 18px;
+    background-color: transparent;
+    border:2.5px solid transparent;
+    box-shadow:4px 3px 3px 3px;
+    font-size: 16px;
+    color: #fff;  
+    cursor: pointer;
+    gap:20px 20px;
+}
+
+.btn:active{
+    color: purple;
+}
+
+
+.Blog{
+    width: 100%;
+    padding: 10px;
+}
+
+.card{
+    margin-bottom: 100px;
+    margin-left: 300px;
+}
+
+
+
+
+/* .card img:hover{
+    width: 50%;
+    background-color: rgb(221, 218, 218);   
+} */
+
+
+/* .card1 img:hover{
+    width: 50%;
+    background-color: rgb(221, 218, 218);   
+} */
+
+/* .card:hover{
+    font-size: 20px;
+    padding-bottom: 30px;   
+} */
+
+/* .card1:hover{
+    font-size: 20px;
+    padding:30px; 
+} */
+
+
+
+
+
+
+
