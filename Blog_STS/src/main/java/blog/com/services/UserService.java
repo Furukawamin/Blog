@@ -45,6 +45,14 @@ public class UserService {
 	public UsersEntity selectById(String email) {
 		return usersRepo.findByEmail(email);
 	}
+	
+	public UsersEntity selectByUsername(String username) {
+		if(username == null) {
+			return null;
+		}else {
+			return usersRepo.findByUsername(username);
+		}
+	}
 	}
 
 

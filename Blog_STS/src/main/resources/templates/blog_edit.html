@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{css/blog_edit.css}">
+    <link rel="stylesheet" th:href="@{/css/blog_edit.css}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
@@ -17,21 +17,23 @@
             <li> <i class='bx bx-search'></i><input type="search-input" placeholder="Search"></li>
         </ul>
     </nav>
-    <form th:action="@{blog_edit}" method="post">
+    <form th:action="@{/blog_edit}" method="post">
         <h1>Blog Edit</h1>
     <div class="wrapper">
         <ul>
-            <li><i class='bx bxs-user'></i><input type="text" name="username" placeholder="User ID" required></li>
-            <li><i class='bx bxl-blogger'></i><input type="text" name="title" placeholder="Blog Title" required></li>
-            <li><i class='bx bx-list-ul' ></i><input type="text" name="category" placeholder="Category"></li>
-            <li><i class='bx bx-calendar' ></i><input type="date" name="calendar" placeholder="/MM/YYYY" ></li>
+            <li><i class='bx bxs-user'></i><input type="text" name="userId" placeholder="User ID" required th:value="${blogData.userId}"></li>
+            <li><i class='bx bxl-blogger'></i><input type="text" name="blogTitle" placeholder="Blog Title" required th:value="${blogData.blogTitle}"></li>
+            <li><i class='bx bx-list-ul' ></i><input type="text" name="blogCategory" placeholder="Category" th:value="${blogData.blogCategory}"></li>
+            <li><i class='bx bx-calendar' ></i><input type="date" name="date" placeholder="/MM/YYYY" th:value="${blogData.date}"></li>
             <li><i class='bx bxs-file-png' ></i><input type="file" name="photo" placeholder="Upload"></li>
-            <li><i class='bx bx-message-rounded-dots' ></i><textarea name="comment" id="" cols="30" rows="10" placeholder="Blog Article"></textarea></li>
+            <li><i class='bx bx-message-rounded-dots' ></i><textarea name="article" id="" cols="30" rows="10" placeholder="Blog Article" th:text="${blogData.article}"></textarea></li>
         </ul>
     </div>
         <div class="btn">
-            <button class="btn">Submit</button>
-            <button class="btn">Delete</button>
+			<input type="hidden" name="blogId" required th:value="${blogData.blogId}">
+            <button class="btn" >Submit</button>
+            <button class="btn" th:formaction="@{/blog_delete}">Delete</button>
+            
         </div>
     </form>
     <footer>
