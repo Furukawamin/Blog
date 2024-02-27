@@ -27,8 +27,8 @@
 				<li>
 					<form th:action="@{/blog_search}" name="search" method="get">
 						<a href="javascript:search.submit()"><i class='bx bx-search'>
-															<!-------Same with controller parameter-->
-							</i></a><input type="search-input" name="query"   placeholder="Search">
+								<!-------Same with controller parameter-->
+							</i></a><input type="search" name="query" placeholder="Search">
 					</form>
 				</li>
 			</ul>
@@ -54,13 +54,14 @@
 	<div class="Blog">
 		<h3>My Daily Blog</h3>
 	</div>
-	<div>					<!-------blog：是指找出某個Blog-->
-							<!-------59-63行是每個Blog都顯示照片，標題，屬性-->
+	<div> <!-------blog：是指找出某個Blog-->
+		<!-------59-63行是每個Blog都顯示照片，標題，屬性-->
 		<div class="card" th:each="blog:${blogList}">
 			<a th:href="'/blog_edit/' + ${blog.blogId}">
 				<!-------<img th:src="@{/image/pic1.jpg}" alt="">-->
+				<!-------blog-img is image folder name & photo is based on blogentity-->
 				<img th:src="'/blog-img/' + ${blog.photo}" alt="">
-				
+
 				<p th:text="${blog.blogTitle}"></p>
 				<p th:text="${blog.blogCategory}"></p>
 			</a>

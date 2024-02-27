@@ -26,6 +26,7 @@ public class BlogEditController {
 	@Autowired
 	private BlogService blogService;
 	
+	//Access to Blog Edit Page
 	@GetMapping("/blog_edit/{blogId}")
 	public String getBlogEditPage(@PathVariable Long blogId,Model model) {
 		//Blog Edit purpose from blogService class(edit blog view)
@@ -58,16 +59,20 @@ public class BlogEditController {
 							@RequestParam Date date,
 							@RequestParam String article) throws IOException {
 		// If Create Blog Successfully go Login Page Else Go Register Page
-		// "" is photo
+		// 
+		
 		String fileName = blogPhoto.getOriginalFilename();
-		//Tell Where Is Image Path
+		//Tell Where Is Image Path     
+		//Upload photo save in blog-img
+		//fileName is photo
+		//In blog.html 62 rows change to <img th:src="'/blog-img/' + ${blog.photo}" alt="">
 		File blogFile = new File("./src/main/resources/static/blog-img/"+fileName);
 		byte[]bytes = blogPhoto.getBytes();
 		//Back Up Image if the Image has Save
 		BufferedOutputStream out = new BufferedOutputStream (new FileOutputStream(blogFile));
 		out.write(bytes);
 		out.close();
-	
+																					
 		if(blogService.updateBlog(blogId,userId,blogTitle,blogCategory,date,article,fileName)) {
 			return "redirect:/blog";
 		}else {

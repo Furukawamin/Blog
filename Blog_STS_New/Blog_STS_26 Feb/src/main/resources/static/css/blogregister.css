@@ -46,6 +46,7 @@ form{
 }
 
 .wrapper input {
+	color: #fff;
     border: 2px solid transparent;
     box-shadow: 3px;
     border-radius: 6px;
@@ -57,7 +58,7 @@ form{
 }
 .wrapper textarea{
     border: 2px solid white;
-
+	color: #fff;
     border-radius: 8px;
     margin: 5px;
     width: 200px;

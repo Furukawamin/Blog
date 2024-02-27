@@ -29,8 +29,8 @@ public class UserService {
 	}
 
 	// LOGIN --> If Username & Password exist
-	//NOT LOGIN ---> If findByUsername&Password == null 
-	//Noted: Refer from UsersRepository 24 rows
+	// NOT LOGIN ---> If findByUsername&Password == null
+	// Noted: Refer from UsersRepository 24 rows
 	public UsersEntity login(String username, String password) {
 		UsersEntity usersEntity = usersRepo.findByUsernameAndPassword(username, password);
 		if (usersEntity == null) {
@@ -45,17 +45,17 @@ public class UserService {
 		return usersRepo.findAll();
 	}
 
-	// Get ID by Email 
-	//Refer UsersRepository 17 rows
-	public UsersEntity selectById(String email) {
-		return usersRepo.findByEmail(email);
-	}
+	// Find email 
+	// Refer UsersRepository 17 rows
+//	public UsersEntity findByEmail(String email) {
+//		return usersRepo.findByEmail(email);
+//	}
 
-	// Get Username by selectByUsername for UserController
+	// Get Username by selectByUsername for UserController,Blog Controller
 	public UsersEntity selectByUsername(String username) {
-		if(username == null) {
+		if (username == null) {
 			return null;
-		}else {
+		} else {
 			return usersRepo.findByUsername(username);
 		}
 	}

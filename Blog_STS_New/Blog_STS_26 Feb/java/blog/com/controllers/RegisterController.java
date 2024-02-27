@@ -1,6 +1,5 @@
 package blog.com.controllers;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,28 +10,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import blog.com.repositories.UsersRepository;
 import blog.com.services.UserService;
-	
+
 @Controller
 public class RegisterController {
-	
+
 	@Autowired
 	private UserService userService;
-	
-	//Access Register Page
+
+	// Access Register Page
 	@GetMapping("/register")
 	public String getRegisterPage() {
 		return "register.html";
 	}
-	
-	//Help user register by user's information 
+
+	// Help user register by user's information
 	@PostMapping("/register")
-	public String register(@RequestParam String name,@RequestParam String email,
-			              @RequestParam String password,@RequestParam String phone) {
-		if (userService.createAccount(name,email,phone,password)) {
-	
-	//Noted：No need add html after return
+	public String register(@RequestParam String name, @RequestParam String email, @RequestParam String password,
+			@RequestParam String phone) {
+		if (userService.createAccount(name, email, phone, password)) {
+
+			// Noted：No need add html after return
 			return "redirect:/login";
-		}else{
+		} else {
 			return "redirect:/register";
 		}
 	}

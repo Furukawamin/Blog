@@ -20,7 +20,7 @@ public class BlogsEntity {
 	private Date date;
 	private String photo;
 	private String article;
-	
+
 	public BlogsEntity() {
 		super();
 	}
@@ -34,14 +34,5 @@ public class BlogsEntity {
 		this.photo = photo;
 		this.article = article;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
-	
 }

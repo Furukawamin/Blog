@@ -21,27 +21,26 @@ import blog.com.services.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-	
 
 	// 用戶登錄之後可以查看user頁面
 	// 用戶輸入userId //返回信息
 	@GetMapping("/user")
 	public ModelAndView getUserInfo(ModelAndView mav) {
 
-	// 得到用戶名
-	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	String username = auth.getName();
+		// 得到用戶名
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
 
-	// 把1個username添加到頁面上
-	// List <UsersEntity> users = userService.findByUsername(username);
-	UsersEntity user = userService.selectByUsername(username);
+		// 把1個username添加到頁面上
+		// List <UsersEntity> users = userService.findByUsername(username);
+		UsersEntity user = userService.selectByUsername(username);
 
-	// System.out.println(users);
-	mav.addObject("user", user);
+		// System.out.println(users);
+		mav.addObject("user", user);
 
-	mav.setViewName("user.html");
+		mav.setViewName("user.html");
 
-	return mav;
+		return mav;
 	}
 
 }

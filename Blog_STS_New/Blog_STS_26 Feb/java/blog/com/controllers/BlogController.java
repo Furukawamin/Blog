@@ -29,21 +29,20 @@ public class BlogController {
 
 	@GetMapping("/blog")
 	public String getBlogLoginPage(Model model) {
-	//爲了得到用戶名
-	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	String username = auth.getName();
+		// 爲了得到用戶名
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
 
-	// 用username找userId
-	UsersEntity user = userService.selectByUsername(username);
-	Long userId = user.getUserId();
+		// 用username找userId
+		UsersEntity user = userService.selectByUsername(username);
+		Long userId = user.getUserId();
 
-	// 用UserID（service）找多個blog 
-	List<BlogsEntity> blogList = blogService.findByUserId(userId);
-		//System.out.println(blogList);
-	model.addAttribute("blogList", blogList);
+		// 用UserID（service）找多個blog
+		List<BlogsEntity> blogList = blogService.findByUserId(userId);
+		// System.out.println(blogList);
+		model.addAttribute("blogList", blogList);
 
-	return "blog.html";
+		return "blog.html";
 	}
-	
 
 }

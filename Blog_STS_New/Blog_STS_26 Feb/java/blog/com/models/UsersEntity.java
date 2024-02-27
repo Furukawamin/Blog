@@ -18,27 +18,16 @@ public class UsersEntity {
 	private String email;
 	private String password;
 	private String phoneNumber;
-	
-	
 
-	public UsersEntity(String username, String email, String password,String phone) {
+	public UsersEntity(String username, String email, String password, String phone) {
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.phoneNumber = phone;
 	}
 
-
-
 	public UsersEntity() {
 		super();
 	}
-	
-	
-	
-	
-	
+
 }
-
-
-

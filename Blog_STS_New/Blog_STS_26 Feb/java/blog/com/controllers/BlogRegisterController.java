@@ -39,19 +39,32 @@ public class BlogRegisterController {
 	// Save Blog data
 	@PostMapping("/blog_register")
 	public String register(@RequestParam Long userId, @RequestParam String blogCategory, @RequestParam String blogTitle,
-			@RequestParam Date date, @RequestParam ("blogPhoto") MultipartFile blogPhoto, @RequestParam String article) throws IOException {
+			@RequestParam Date date, @RequestParam("blogPhoto") MultipartFile blogPhoto, @RequestParam String article)
+			throws IOException {
+
+		// Show photo date
+//		String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-").format(new Date())
+//				+ blogPhoto.getOriginalFilename();
 
 		// If Create Blog Successfully go Login Page Else Go Register Page
 		// "" is photo
 		String fileName = blogPhoto.getOriginalFilename();
-		//Tell Where Is Image Path
-		File blogFile = new File("./src/main/resources/static/blog-img/"+fileName);
-		byte[]bytes = blogPhoto.getBytes();
-		//Back Up Image if the Image has Save
-		BufferedOutputStream out = new BufferedOutputStream (new FileOutputStream(blogFile));
-		out.write(bytes);
-		out.close();
-		if (blogService.createBlog(userId, blogCategory, blogTitle, date,fileName, article)) {
+
+		// Tell Where Is Image Path
+		// Upload photo save in blog-img
+		// fileName is photo
+		// In blog.html 62 rows change to <img th:src="'/blog-img/' + ${blog.photo}"
+		// alt="">
+//		File blogFile = new File("./src/main/resources/static/blog-img/"+fileName);
+//		byte[]bytes = blogPhoto.getBytes();
+//		//Back Up Image if the Image has Save
+//		BufferedOutputStream out = new BufferedOutputStream (new FileOutputStream(blogFile));
+//		out.write(bytes);
+//		out.close();
+
+		Files.copy(blogPhoto.getInputStream(), Path.of("./src/main/resources/static/blog-img/" + fileName));
+
+		if (blogService.createBlog(userId, blogCategory, blogTitle, date, fileName, article)) {
 			return "redirect:/blog";
 		} else {
 			return "redirect:/register";
