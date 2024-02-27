@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user information</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my event blogs.</h1>
+    </header>
+    <div>
+        <p>About me</p>
+        <p>Name: <span th:text="${user.username}"></span></p>
+        <p>Email Address:<span th:text="${user.email}"></span></p>
+        <p>Phone number:<span th:text="${user.phoneNumber}"></span></p>
+    </div>
+</body>
+</html>
